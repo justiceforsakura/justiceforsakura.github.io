@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-67Q3Y81JC9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-67Q3Y81JC9');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Justice for Sakura Lewis</title>
+<meta name="description" content="Sakura Lewis is 19. Her father left her an inheritance. The courts have blocked her from it for seven years. Texas Supreme Court Case No. 26-0468.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --fuchsia: #ff1a8c;
+    --fuchsia-deep: #e0007a;
+    --fuchsia-dark: #c0006a;
+    --white: #ffffff;
+    --off-white: #f8f8f8;
+    --silver: #c8c8d8;
+    --silver-light: #e8e8f0;
+    --silver-dim: #9090a8;
+    --black: #0d0d0d;
+    --near-black: #1a1a1a;
+    --gray: #444444;
+    --light-gray: #888888;
+    --border-silver: #d0d0e0;
+    --fuchsia-pale: #fff0f7;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--white);
+    color: var(--black);
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  nav {
+    background: var(--white);
+    padding: 0 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    border-bottom: 3px solid var(--fuchsia);
+    box-shadow: 0 2px 20px rgba(255,26,140,0.1);
+  }
+
+  nav .logo {
+    font-family: 'Playfair Display', serif;
+    color: var(--black);
+    font-size: 1rem;
+    font-weight: 900;
+    padding: 0.9rem 0;
+  }
+
+  nav .logo span { color: var(--fuchsia); }
+  nav ul { list-style: none; display: flex; flex-wrap: wrap; }
+
+  nav ul a {
+    color: var(--gray);
+    text-decoration: none;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.65rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  nav ul a:hover { color: var(--fuchsia); }
+
+  .alert-bar {
+    background: var(--fuchsia);
+    color: white;
+    text-align: center;
+    padding: 0.65rem 2rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+  }
+
+  .hero {
+    background: #0a0a0a;
+    padding: 5.5rem 2rem 4.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 60% 50%, rgba(255,26,140,0.28) 0%, transparent 60%),
+      radial-gradient(ellipse at 15% 40%, rgba(255,26,140,0.12) 0%, transparent 45%),
+      radial-gradient(ellipse at 90% 20%, rgba(255,26,140,0.10) 0%, transparent 40%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero::after { display: none; }
+
+  .hero-blossom-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 1;
+  }
+
+  .hero > *:not(.hero-blossom-bg) {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--fuchsia);
+    margin-bottom: 1.75rem;
+    font-weight: 500;
+    position: relative;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    line-height: 1;
+    color: var(--white);
+    position: relative;
+    letter-spacing: -0.02em;
+  }
+
+  .hero h1 span { display: block; color: var(--fuchsia); }
+
+  .hero-divider {
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--fuchsia), rgba(255,255,255,0.3));
+    margin: 1.75rem auto;
+    position: relative;
+  }
+
+  .hero-case {
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 2rem;
+    position: relative;
+  }
+
+  .case-grid {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: rgba(255,255,255,0.3);
+    border: 2px solid rgba(255,255,255,0.4);
+    margin: 0 auto 2.5rem;
+    max-width: 500px;
+    text-align: left;
+    position: relative;
+  }
+
+  .case-cell { background: rgba(0,0,0,0.35); padding: 1rem 1.25rem; }
+
+  .case-cell-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+  }
+
+  .case-cell-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.92rem;
+    color: var(--white);
+    font-weight: 700;
+  }
+
+  .case-cell-value.live { color: #fff; }
+
+  .btn {
+    display: inline-block;
+    padding: 0.8rem 1.75rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid white;
+    color: white;
+    transition: all 0.2s;
+    margin: 0.35rem;
+    font-weight: 600;
+    position: relative;
+  }
+
+  .btn:hover { background: white; color: var(--fuchsia); }
+  .btn-solid { background: white; color: var(--fuchsia); }
+  .btn-solid:hover { background: var(--black); border-color: var(--black); color: white; }
+  .btn-dark { border-color: var(--fuchsia); color: var(--fuchsia); background: white; }
+  .btn-dark:hover { background: var(--fuchsia); color: white; }
+
+  section { max-width: 840px; margin: 0 auto; padding: 4.5rem 2rem; }
+
+  .section-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--fuchsia);
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.9rem, 4vw, 2.6rem);
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+    color: var(--black);
+    letter-spacing: -0.02em;
+  }
+
+  .divider { width: 36px; height: 3px; background: var(--fuchsia); margin-bottom: 2rem; }
+
+  p { margin-bottom: 1.2rem; color: var(--gray); line-height: 1.8; }
+  .lead { font-size: 1.05rem; color: var(--near-black); font-weight: 400; }
+
+  .section-white { background: var(--white); }
+
+  .section-silver {
+    background: var(--silver-light);
+    border-top: 1px solid var(--border-silver);
+    border-bottom: 1px solid var(--border-silver);
+  }
+
+  .section-fuchsia { background: var(--fuchsia); }
+  .section-fuchsia h2 { color: white; }
+  .section-fuchsia .section-label { color: rgba(255,255,255,0.7); }
+  .section-fuchsia p { color: rgba(255,255,255,0.85); }
+  .section-fuchsia .divider { background: white; opacity: 0.5; }
+
+  .section-dark { background: var(--near-black); border-top: 3px solid var(--fuchsia); }
+  .section-dark h2 { color: white; }
+  .section-dark .section-label { color: var(--fuchsia); }
+  .section-dark p { color: var(--silver); }
+  .section-dark .divider { background: var(--fuchsia); }
+
+  .section-white section, .section-silver section,
+  .section-fuchsia section, .section-dark section { max-width: 840px; }
+
+  blockquote {
+    border-left: 4px solid var(--fuchsia);
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    background: var(--fuchsia-pale);
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--near-black);
+    font-family: 'Playfair Display', serif;
+  }
+
+  .timeline { position: relative; padding-left: 2.25rem; }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 4px; top: 0.6rem; bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg, var(--fuchsia), var(--silver));
+  }
+
+  .timeline-item { position: relative; margin-bottom: 2.5rem; }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.05rem; top: 0.55rem;
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: var(--fuchsia);
+    box-shadow: 0 0 0 3px rgba(255,26,140,0.2);
+  }
+
+  .timeline-year {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--fuchsia);
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+  }
+
+  .timeline-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: var(--black);
+  }
+
+  .timeline-body { font-size: 0.9rem; color: var(--light-gray); margin: 0; line-height: 1.7; }
+
+  .motions-grid { display: grid; gap: 6px; margin-top: 2rem; }
+
+  .motion-row {
+    background: #242424;
+    border-left: 3px solid var(--fuchsia);
+    padding: 1rem 1.25rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    transition: background 0.2s;
+  }
+
+  .motion-row:hover { background: #2e2e2e; }
+  .motion-title { font-size: 0.92rem; color: var(--silver-light); margin-bottom: 0.2rem; font-weight: 600; }
+  .motion-court { font-size: 0.72rem; color: var(--silver-dim); }
+
+  .motion-status {
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.65rem;
+    white-space: nowrap;
+    font-weight: 700;
+    border: 1px solid;
+  }
+
+  .status-filed { border-color: var(--fuchsia); color: var(--fuchsia); }
+  .status-pending { border-color: var(--silver-dim); color: var(--silver); }
+  .status-live { border-color: white; color: white; }
+  .status-escalating { border-color: #ff8800; color: #ff8800; }
+
+  .issues-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    gap: 1px;
+    background: var(--border-silver);
+    border: 1px solid var(--border-silver);
+    margin-top: 2rem;
+  }
+
+  .issue-card {
+    padding: 1.75rem 1.5rem;
+    background: var(--white);
+    position: relative;
+    transition: background 0.2s;
+  }
+
+  .issue-card:hover { background: var(--fuchsia-pale); }
+
+  .issue-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--fuchsia);
+  }
+
+  .issue-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--fuchsia);
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 0.6rem;
+    opacity: 0.25;
+  }
+
+  .issue-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--black); }
+  .issue-body { font-size: 0.85rem; color: var(--light-gray); line-height: 1.65; margin: 0; }
+
+  .help-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 2px;
+    background: rgba(255,255,255,0.3);
+    margin-top: 2rem;
+  }
+
+  .help-card {
+    text-align: center;
+    padding: 2rem 1.25rem;
+    background: rgba(0,0,0,0.2);
+    transition: background 0.2s;
+  }
+
+  .help-card:hover { background: rgba(0,0,0,0.35); }
+  .help-icon { font-size: 2rem; margin-bottom: 0.75rem; display: block; }
+
+  .help-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+    color: white;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .help-card p { font-size: 0.84rem; color: rgba(255,255,255,0.75); margin-bottom: 1rem; }
+
+  .contact-info {
+    background: var(--fuchsia-pale);
+    border: 2px solid var(--fuchsia);
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+
+  .contact-info a {
+    color: var(--fuchsia-deep);
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  .contact-info a:hover { color: var(--fuchsia-dark); text-decoration: underline; }
+
+  .sc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1px;
+    background: var(--border-silver);
+    border: 1px solid var(--border-silver);
+    margin: 2rem 0;
+  }
+
+  .sc-cell { background: white; padding: 1.1rem 1.25rem; }
+
+  .sc-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--light-gray);
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+  }
+
+  .sc-value { font-family: 'Playfair Display', serif; font-size: 0.95rem; color: var(--black); font-weight: 700; }
+  .sc-value.live { color: var(--fuchsia); }
+
+  footer {
+    background: var(--black);
+    color: var(--silver-dim);
+    text-align: center;
+    padding: 2.5rem 2rem;
+    font-size: 0.8rem;
+    border-top: 3px solid var(--fuchsia);
+  }
+
+  footer a { color: var(--fuchsia); text-decoration: none; }
+
+  .privacy-note {
+    font-size: 0.76rem;
+    color: var(--light-gray);
+    font-style: italic;
+    border-top: 1px solid var(--border-silver);
+    padding-top: 1rem;
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 600px) {
+    nav { padding: 0 1rem; }
+    .hero { padding: 3.5rem 1.25rem 3rem; }
+    section { padding: 3rem 1.25rem; }
+    .motion-row { grid-template-columns: 1fr; }
+    .case-grid { grid-template-columns: 1fr; width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Justice for <span>Sakura</span> 🌸</div>
+  <ul>
+    <li><a href="#story">Story</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#supreme-court">Supreme Court</a></li>
+    <li><a href="#motions">Motions</a></li>
+    <li><a href="#issues">Issues</a></li>
+    <li><a href="#help">Help</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="alert-bar">
+  <strong>LIVE:</strong> Texas Supreme Court Case No. 26-0468 &nbsp;·&nbsp; Motion to Stay Under Review &nbsp;·&nbsp; Filed Pro Se · May 11, 2026
+</div>
+
+<div class="hero">
+
+<!-- Cherry blossom SVG background -->
+<svg class="hero-blossom-bg" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Single cherry blossom petal shape -->
+    <path id="petal" d="M0,-18 C6,-12 10,-4 8,0 C10,4 6,12 0,18 C-6,12 -10,4 -8,0 C-10,-4 -6,-12 0,-18 Z"/>
+    <!-- 5-petal blossom -->
+    <g id="blossom">
+      <use href="#petal" transform="rotate(0)" fill="#1a1a1a" stroke="#ff1a8c" stroke-width="0.8"/>
+      <use href="#petal" transform="rotate(72)" fill="#1a1a1a" stroke="#ff1a8c" stroke-width="0.8"/>
+      <use href="#petal" transform="rotate(144)" fill="#1a1a1a" stroke="#ff1a8c" stroke-width="0.8"/>
+      <use href="#petal" transform="rotate(216)" fill="#1a1a1a" stroke="#ff1a8c" stroke-width="0.8"/>
+      <use href="#petal" transform="rotate(288)" fill="#1a1a1a" stroke="#ff1a8c" stroke-width="0.8"/>
+      <circle r="3" fill="#ff1a8c" opacity="0.9"/>
+      <!-- white highlight on petals -->
+      <use href="#petal" transform="rotate(0) translate(0,-6) scale(0.3,0.3)" fill="white" opacity="0.4"/>
+      <use href="#petal" transform="rotate(72) translate(0,-6) scale(0.3,0.3)" fill="white" opacity="0.4"/>
+      <use href="#petal" transform="rotate(144) translate(0,-6) scale(0.3,0.3)" fill="white" opacity="0.4"/>
+      <use href="#petal" transform="rotate(216) translate(0,-6) scale(0.3,0.3)" fill="white" opacity="0.4"/>
+      <use href="#petal" transform="rotate(288) translate(0,-6) scale(0.3,0.3)" fill="white" opacity="0.4"/>
+    </g>
+    <!-- fuchsia-filled blossom variant -->
+    <g id="blossom-bright">
+      <use href="#petal" transform="rotate(0)" fill="#ff1a8c" stroke="#ffffff" stroke-width="0.6" opacity="0.85"/>
+      <use href="#petal" transform="rotate(72)" fill="#ff1a8c" stroke="#ffffff" stroke-width="0.6" opacity="0.85"/>
+      <use href="#petal" transform="rotate(144)" fill="#ff1a8c" stroke="#ffffff" stroke-width="0.6" opacity="0.85"/>
+      <use href="#petal" transform="rotate(216)" fill="#ff1a8c" stroke="#ffffff" stroke-width="0.6" opacity="0.85"/>
+      <use href="#petal" transform="rotate(288)" fill="#ff1a8c" stroke="#ffffff" stroke-width="0.6" opacity="0.85"/>
+      <circle r="3" fill="white" opacity="0.9"/>
+    </g>
+    <!-- gray blossom variant -->
+    <g id="blossom-gray">
+      <use href="#petal" transform="rotate(0)" fill="#2a2a2a" stroke="#888" stroke-width="0.6"/>
+      <use href="#petal" transform="rotate(72)" fill="#2a2a2a" stroke="#888" stroke-width="0.6"/>
+      <use href="#petal" transform="rotate(144)" fill="#2a2a2a" stroke="#888" stroke-width="0.6"/>
+      <use href="#petal" transform="rotate(216)" fill="#2a2a2a" stroke="#888" stroke-width="0.6"/>
+      <use href="#petal" transform="rotate(288)" fill="#2a2a2a" stroke="#888" stroke-width="0.6"/>
+      <circle r="2.5" fill="#555" opacity="0.8"/>
+    </g>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="1440" height="700" fill="#0a0a0a"/>
+
+  <!-- Scattered branches suggestion - thin dark lines -->
+  <g stroke="#1e1e1e" stroke-width="1" fill="none" opacity="0.6">
+    <path d="M0,200 Q200,150 350,180 Q500,210 600,160 Q750,110 900,170 Q1100,230 1200,190 Q1350,150 1440,180"/>
+    <path d="M0,500 Q150,480 300,520 Q500,560 650,490 Q800,420 1000,480 Q1200,540 1440,500"/>
+    <path d="M200,0 Q220,100 210,200 Q200,320 230,420"/>
+    <path d="M1100,0 Q1080,80 1090,200 Q1100,340 1080,500"/>
+    <path d="M600,700 Q580,600 595,480 Q610,360 590,250"/>
+  </g>
+
+  <!-- Left cluster — mostly dark with some fuchsia -->
+  <g transform="translate(60,120) rotate(-15) scale(1.4)"><use href="#blossom"/></g>
+  <g transform="translate(30,180) rotate(20) scale(1.1)"><use href="#blossom-gray"/></g>
+  <g transform="translate(100,90) rotate(5) scale(0.9)"><use href="#blossom-bright"/></g>
+  <g transform="translate(140,200) rotate(-30) scale(1.2)"><use href="#blossom"/></g>
+  <g transform="translate(20,280) rotate(10) scale(1.0)"><use href="#blossom"/></g>
+  <g transform="translate(80,320) rotate(-8) scale(0.85)"><use href="#blossom-bright"/></g>
+  <g transform="translate(160,150) rotate(25) scale(0.8)"><use href="#blossom-gray"/></g>
+  <g transform="translate(200,260) rotate(-5) scale(1.1)"><use href="#blossom"/></g>
+  <g transform="translate(50,400) rotate(15) scale(1.3)"><use href="#blossom-gray"/></g>
+  <g transform="translate(120,450) rotate(-20) scale(0.9)"><use href="#blossom"/></g>
+  <g transform="translate(200,380) rotate(8) scale(1.0)"><use href="#blossom-bright"/></g>
+  <g transform="translate(10,480) rotate(-12) scale(0.8)"><use href="#blossom"/></g>
+  <g transform="translate(170,520) rotate(18) scale(1.1)"><use href="#blossom-gray"/></g>
+  <g transform="translate(60,560) rotate(-5) scale(0.9)"><use href="#blossom-bright"/></g>
+  <g transform="translate(240,100) rotate(30) scale(0.7)"><use href="#blossom"/></g>
+  <g transform="translate(280,340) rotate(-18) scale(1.0)"><use href="#blossom"/></g>
+  <g transform="translate(240,480) rotate(12) scale(0.85)"><use href="#blossom-gray"/></g>
+
+  <!-- Right cluster -->
+  <g transform="translate(1380,100) rotate(10) scale(1.3)"><use href="#blossom"/></g>
+  <g transform="translate(1410,200) rotate(-15) scale(1.0)"><use href="#blossom-bright"/></g>
+  <g transform="translate(1350,170) rotate(20) scale(0.9)"><use href="#blossom-gray"/></g>
+  <g transform="translate(1390,300) rotate(-8) scale(1.2)"><use href="#blossom"/></g>
+  <g transform="translate(1320,260) rotate(25) scale(0.85)"><use href="#blossom-bright"/></g>
+  <g transform="translate(1430,380) rotate(-20) scale(1.0)"><use href="#blossom"/></g>
+  <g transform="translate(1280,350) rotate(5) scale(1.1)"><use href="#blossom-gray"/></g>
+  <g transform="translate(1360,430) rotate(-12) scale(0.9)"><use href="#blossom"/></g>
+  <g transform="translate(1420,500) rotate(15) scale(1.1)"><use href="#blossom-bright"/></g>
+  <g transform="translate(1300,500) rotate(-5) scale(0.8)"><use href="#blossom"/></g>
+  <g transform="translate(1370,570) rotate(18) scale(1.2)"><use href="#blossom-gray"/></g>
+  <g transform="translate(1200,150) rotate(-10) scale(0.9)"><use href="#blossom"/></g>
+  <g transform="translate(1230,280) rotate(22) scale(1.0)"><use href="#blossom-bright"/></g>
+  <g transform="translate(1180,420) rotate(-15) scale(1.1)"><use href="#blossom-gray"/></g>
+  <g transform="translate(1250,550) rotate(8) scale(0.85)"><use href="#blossom"/></g>
+
+  <!-- Top scattered petals -->
+  <g transform="translate(400,30) rotate(-5) scale(0.8)"><use href="#blossom-gray"/></g>
+  <g transform="translate(500,50) rotate(12) scale(1.0)"><use href="#blossom"/></g>
+  <g transform="translate(650,20) rotate(-18) scale(0.9)"><use href="#blossom-bright"/></g>
+  <g transform="translate(780,45) rotate(8) scale(0.85)"><use href="#blossom-gray"/></g>
+  <g transform="translate(920,30) rotate(-10) scale(1.0)"><use href="#blossom"/></g>
+  <g transform="translate(1050,55) rotate(15) scale(0.8)"><use href="#blossom-bright"/></g>
+
+  <!-- Bottom scattered -->
+  <g transform="translate(350,650) rotate(10) scale(0.9)"><use href="#blossom"/></g>
+  <g transform="translate(500,670) rotate(-8) scale(1.0)"><use href="#blossom-gray"/></g>
+  <g transform="translate(700,660) rotate(20) scale(0.85)"><use href="#blossom-bright"/></g>
+  <g transform="translate(900,680) rotate(-5) scale(1.0)"><use href="#blossom"/></g>
+  <g transform="translate(1100,650) rotate(12) scale(0.9)"><use href="#blossom-gray"/></g>
+
+  <!-- Falling individual petals scattered -->
+  <use href="#petal" transform="translate(320,200) rotate(45) scale(0.7)" fill="#ff1a8c" opacity="0.5"/>
+  <use href="#petal" transform="translate(420,350) rotate(-20) scale(0.5)" fill="white" opacity="0.2"/>
+  <use href="#petal" transform="translate(580,120) rotate(70) scale(0.6)" fill="#ff1a8c" opacity="0.35"/>
+  <use href="#petal" transform="translate(750,400) rotate(30) scale(0.5)" fill="white" opacity="0.15"/>
+  <use href="#petal" transform="translate(850,200) rotate(-50) scale(0.65)" fill="#ff1a8c" opacity="0.3"/>
+  <use href="#petal" transform="translate(980,320) rotate(15) scale(0.55)" fill="white" opacity="0.18"/>
+  <use href="#petal" transform="translate(1120,250) rotate(-35) scale(0.6)" fill="#ff1a8c" opacity="0.4"/>
+  <use href="#petal" transform="translate(450,500) rotate(55) scale(0.5)" fill="#ff1a8c" opacity="0.25"/>
+  <use href="#petal" transform="translate(680,580) rotate(-25) scale(0.6)" fill="white" opacity="0.15"/>
+  <use href="#petal" transform="translate(1050,480) rotate(40) scale(0.55)" fill="#ff1a8c" opacity="0.3"/>
+</svg>
+  <h1>Justice for<span>Sakura Lewis</span></h1>
+  <div class="hero-divider"></div>
+  <div class="hero-case">Texas Supreme Court · Case No. 26-0468 · Probate Case C-1-PB-18-000719</div>
+
+  <div class="case-grid">
+    <div class="case-cell">
+      <div class="case-cell-label">Supreme Court</div>
+      <div class="case-cell-value">Case No. 26-0468</div>
+    </div>
+    <div class="case-cell">
+      <div class="case-cell-label">Filed</div>
+      <div class="case-cell-value">May 11, 2026</div>
+    </div>
+    <div class="case-cell">
+      <div class="case-cell-label">Motion to Stay</div>
+      <div class="case-cell-value live">⬤ Under Review</div>
+    </div>
+    <div class="case-cell">
+      <div class="case-cell-label">Respondents</div>
+      <div class="case-cell-value">Herman · Waldrip</div>
+    </div>
+  </div>
+
+  <div>
+    <a href="#story" class="btn btn-solid">Read the Story</a>
+    <a href="#supreme-court" class="btn">Supreme Court Filing</a>
+    <a href="#help" class="btn">How to Help</a>
+  </div>
+</div>
+
+<div class="section-white" id="story">
+<section>
+  <div class="section-label">The Story</div>
+  <h2>What Happened to Sakura</h2>
+  <div class="divider"></div>
+
+  <p class="lead">Sakura Lewis is 19 years old. Her father Nigel Lewis passed away in 2018 and left her a home and an inheritance. A court-appointed guardian now controls her money. She has to ask permission to access it — even though she has been a legal adult since January, 2025.</p>
+
+  <p>Sakura's mother, Anna Nyulund, is a graduate engineer with a BS in Aerospace Engineering from the University of Texas, MS in Petroleum Engineering from the University of Alaska, Fairbanks and postgraduate degree in Machine Learning from the UT Austin. She served as Guardian of the Estate from 2018 until March 6, 2025, when Probate Court No. 1 removed her based on unsubstantiated embezzlement allegations — without a proper hearing — and appointed a successor guardian, Craig Hopper. These allegations have since been used as pretext for service denials across multiple institutions.</p>
+
+  <blockquote>"It terminates when I say it terminates." — Judge Guy Herman, Probate Court No. 1, Travis County (Transcript p. 6)</blockquote>
+
+  <p>The family home at 19409 Melwas Way, Pflugerville, Texas — 100% owned by Sakura — has had no running water since August 29, 2024, when Crossroads Water Company disconnected service with only one day's notice, in violation of the required 10-day notice under Texas law. Electricity was cut February 24, 2025, after Green Mountain Energy imposed an unauthorized 150% rate increase. The home became uninhabitable. Anna was evicted on August 12, 2025, while her motions were pending — a constable informed her the motions "did not go through."</p>
+
+  <p>Anna's former probate attorney, Charles Smaistrla, made multiple antisemitic remarks when she questioned unexpected invoices totaling approximately $15,000. He withdrew after she challenged his conduct. The court approved his withdrawal fees, which were deducted from Sakura's estate. A motion for reimbursement of a $2,000 overcharge was filed in June 2025.</p>
+
+  <p>Anna has experienced discrimination based on her national origin — she is a Ukrainian-Polish-Jewish engineer, born in Russia, with an accent — at her former employer Charter Communications (EEOC charge filed May 2, 2022), in the Pflugerville community, and at Weiss High School where Sakura also faced harassment connected to this targeting. Sakura faces harassment as Anna's daughter.</p>
+
+  <p>Food assistance applications have been denied through procedural barriers since 2025 — including denial after missing a single required phone call with no second opportunity offered — barriers that disproportionately affect people with ADHD. Anna has ADHD, documented and submitted to the court.</p>
+
+  <p>As of early 2026, Anna is homeless, sleeping at public libraries while continuing to file motions pro se. On May 11, 2026, she filed a 13.33 MB Petition for Writ of Mandamus with the Texas Supreme Court — alone, without an attorney. The court accepted it the same day.</p>
+
+  <p class="privacy-note">Sensitive case details are redacted where required by privacy protections. Documents available to attorneys and investigators upon request.</p>
+</section>
+</div>
+
+<div class="section-silver">
+<section id="timeline">
+  <div class="section-label">Case History</div>
+  <h2>Timeline</h2>
+  <div class="divider"></div>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-year">2018</div>
+      <div class="timeline-title">Nigel Lewis passes away — Probate Case opened</div>
+      <p class="timeline-body">Probate Case No. C-1-PB-18-000719 opened in Travis County Probate Court No. 1. Anna Nyulund appointed Guardian of the Estate for Sakura. The family home at 19409 Melwas Way, Pflugerville — appraised at $406,892 — is 100% owned by Sakura.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">2021 – 2022</div>
+      <div class="timeline-title">Employment discrimination — EEOC charge filed</div>
+      <p class="timeline-body">Anna, a graduate engineer with MS in Petroleum Engineering, was hired as Analytics Manager at Charter Communications in December 2021. She was subjected to a hostile work environment based on her national origin (Ukrainian-Polish-Jewish, Russian-born), sex, and disability (ADHD). Her supervisor singled out Anna and a Russian refugee colleague during a staff meeting about Ukraine and Chernobyl. Anna was fired April 8, 2022 without explanation after filing internal discrimination complaints. EEOC charge filed May 2, 2022. This termination directly contributed to the financial hardship that followed.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">2018 – 2024</div>
+      <div class="timeline-title">Probate delays, attorney misconduct, harassment</div>
+      <p class="timeline-body">Property taxes and HOA fees accumulate on 19409 Melwas Way. Former probate attorney Charles Smaistrla makes multiple antisemitic remarks when Anna questions invoices totaling ~$15,000, then withdraws — his fees improperly deducted from Sakura's estate. Anna experiences harassment in the Pflugerville community based on her national origin and accent. Sakura faces harassment at Weiss High School connected to targeting of her mother. Food assistance applications denied through procedural barriers.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">August 29, 2024</div>
+      <div class="timeline-title">Water shutoff — one day's notice, law requires ten</div>
+      <p class="timeline-body">Crossroads Water Company disconnects water service with only one day's notice, violating the required 10-day notice under 16 TAC 24.167. The home at 19409 Melwas Way has had no running water since. Prior to this, duplicate charges and unauthorized rate increases had been documented and reported.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">January 10, 2025</div>
+      <div class="timeline-title">Sakura turns 18 — still classified as incapacitated</div>
+      <p class="timeline-body">Sakura becomes a legal adult. Probate Court No. 1 continues to classify her as a minor and mentally incapacitated. Frost Bank cannot release her funds without a corrected court order. The error has not been fixed.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">January 30, 2025</div>
+      <div class="timeline-title">Anna arrested — collision at malfunctioning traffic light</div>
+      <p class="timeline-body">Anna is arrested near her home for a collision at a malfunctioning traffic light while living without running water. Booking #2502267, Criminal Case No. C-1-CR-25-600010. Released on $250 personal bond January 31. Motion to Dismiss filed February 2026 citing no probable cause — kinematic impossibility — and unconstitutional custodial conditions. Hearing set June 4, 2026.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">February 24, 2025</div>
+      <div class="timeline-title">Electricity cut — 150% unauthorized rate increase</div>
+      <p class="timeline-body">Green Mountain Energy disconnects electricity following an unauthorized 150% rate increase (Account #19940460-9). The home is now without both water and electricity. PUC Docket 57989 filed April 21, 2025.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">March 6, 2025</div>
+      <div class="timeline-title">Anna removed as guardian — unsubstantiated allegations</div>
+      <p class="timeline-body">Judge Guy Herman issues an order containing unsubstantiated embezzlement allegations against Anna and removes her as Guardian of the Estate. Craig Hopper appointed Successor Guardian. These allegations are subsequently used as pretext for service denials across multiple institutions. No proper hearing was held.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">August 12, 2025</div>
+      <div class="timeline-title">Anna evicted — motions pending, constable proceeds anyway</div>
+      <p class="timeline-body">Eviction executed by constable while Anna's motions were pending. Constable states the motions "did not go through." Anna becomes homeless, sleeping at public libraries including the PCL Library in Austin. She continues filing motions pro se.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">May 11, 2026</div>
+      <div class="timeline-title">Texas Supreme Court — Mandamus filed pro se</div>
+      <p class="timeline-body">Anna files a 13.33 MB Petition for Writ of Mandamus with the Texas Supreme Court entirely on her own — no attorney, no home, no money. Case No. 26-0468 accepted the same day. Forwarded to justices May 12. Motion to Stay filed May 15 — currently under review. Judges Herman and Waldrip named as Respondents.</p>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="section-white" id="supreme-court">
+<section>
+  <div class="section-label">Texas Supreme Court</div>
+  <h2>Case No. 26-0468 — In Re Anna Nyulund</h2>
+  <div class="divider"></div>
+
+  <p class="lead">On May 11, 2026, Anna Nyulund filed a Petition for Writ of Mandamus with the Texas Supreme Court — pro se, no attorney — asking the court to compel Probate Court No. 1 to act. The filing was accepted the same day.</p>
+
+  <div class="sc-grid">
+    <div class="sc-cell"><div class="sc-label">Supreme Court Case</div><div class="sc-value">26-0468</div></div>
+    <div class="sc-cell"><div class="sc-label">Date Filed</div><div class="sc-value">May 11, 2026</div></div>
+    <div class="sc-cell"><div class="sc-label">3rd Court of Appeals</div><div class="sc-value">03-26-00426-CV</div></div>
+    <div class="sc-cell"><div class="sc-label">Probate Case</div><div class="sc-value">C-1-PB-18-000719</div></div>
+    <div class="sc-cell"><div class="sc-label">Relator</div><div class="sc-value">Anna Nyulund</div></div>
+    <div class="sc-cell"><div class="sc-label">Respondents</div><div class="sc-value">Hon. Guy S. Herman · Hon. Dib Waldrip</div></div>
+    <div class="sc-cell"><div class="sc-label">Motion to Stay</div><div class="sc-value live">Filed May 15 · Under Review</div></div>
+    <div class="sc-cell"><div class="sc-label">Real Parties in Interest</div><div class="sc-value">Sakura Lewis · Craig Hopper · John Crane · Elizabeth Brenner · Ophelia Enamorado</div></div>
+  </div>
+
+  <p>Verify this case at <strong>search.txcourts.gov</strong> — Case No. 26-0468.</p>
+</section>
+</div>
+
+<div class="section-dark" id="motions">
+<section>
+  <div class="section-label">Legal Record</div>
+  <h2>Motions & Filings</h2>
+  <div class="divider"></div>
+  <p>Filings across probate, civil, criminal, and regulatory proceedings.</p>
+
+  <div class="motions-grid">
+    <div class="motion-row">
+      <div><div class="motion-title">Petition for Writ of Mandamus</div><div class="motion-court">Texas Supreme Court · Case No. 26-0468 · Filed May 11, 2026</div></div>
+      <span class="motion-status status-filed">Filed</span>
+    </div>
+    <div class="motion-row">
+      <div><div class="motion-title">Motion to Stay</div><div class="motion-court">Texas Supreme Court · Case No. 26-0468 · Filed May 15, 2026</div></div>
+      <span class="motion-status status-live">Under Review</span>
+    </div>
+    <div class="motion-row">
+      <div><div class="motion-title">Petition for Judicial Review (Refile from District)</div><div class="motion-court">Probate Court No. 1 · C-1-PB-18-000719</div></div>
+      <span class="motion-status status-filed">Filed</span>
+    </div>
+    <div class="motion-row">
+      <div><div class="motion-title">Motion for Comprehensive Accounting</div><div class="motion-court">Probate Court No. 1 · C-1-PB-18-000719</div></div>
+      <span class="motion-status status-pending">Pending</span>
+    </div>
+    <div class="motion-row">
+      <div><div class="motion-title">Motion to Compel Discovery</div><div class="motion-court">Probate Court No. 1 · C-1-PB-18-000719</div></div>
+      <span class="motion-status status-filed">Filed</span>
+    </div>
+    <div class="motion-row">
+      <div><div class="motion-title">Motion to Vacate Incapacity Order</div><div class="motion-court">Probate Court No. 1 · C-1-PB-18-000719</div></div>
+      <span class="motion-status status-pending">Pending</span>
+    </div>
+    <div class="motion-row">
+      <div><div class="motion-title">Motion for Extension of Time — Green Mountain Energy</div><div class="motion-court">Texas PUC · Docket No. 57989</div></div>
+      <span class="motion-status status-filed">Filed</span>
+    </div>
+    <div class="motion-row">
+      <div><div class="motion-title">Motion for SOAH Hearing — Green Mountain Energy</div><div class="motion-court">Texas PUC / SOAH · Docket No. 57989</div></div>
+      <span class="motion-status status-filed">Filed</span>
+    </div>
+    <div class="motion-row">
+      <div><div class="motion-title">Complaint — Green Mountain Energy (150% Rate Increase)</div><div class="motion-court">Texas PUC · Tracking No. IZTZSQVZ</div></div>
+      <span class="motion-status status-escalating">Escalating</span>
+    </div>
+    <div class="motion-row">
+      <div><div class="motion-title">Complaint — Crossroads Water Company (Unlawful Shutoff)</div><div class="motion-court">Texas PUC · Control No. 57989 · AG Ken Paxton notified</div></div>
+      <span class="motion-status status-pending">Pending</span>
+    </div>
+  </div>
+
+  <p style="margin-top:1.5rem;font-size:0.8rem;font-style:italic;">Details redacted per Motion for Privacy Protections. Full exhibits available to attorneys and investigators upon request.</p>
+</section>
+</div>
+
+<div class="section-white" id="issues">
+<section>
+  <div class="section-label">Core Issues</div>
+  <h2>What This Case Is About</h2>
+  <div class="divider"></div>
+
+  <div class="issues-grid">
+    <div class="issue-card">
+      <div class="issue-num">01</div>
+      <div class="issue-title">Sakura is an adult. She still can't access her own money.</div>
+      <p class="issue-body">Sakura turned 18 on January 10, 2025. Probate Court No. 1 continues to classify her as a minor and mentally incapacitated. Frost Bank cannot release her funds without a corrected court order. A court-appointed guardian controls her inheritance. She has to ask permission for her own money.</p>
+    </div>
+    <div class="issue-card">
+      <div class="issue-num">02</div>
+      <div class="issue-title">No water since August 29, 2024. No electricity since February 24, 2025.</div>
+      <p class="issue-body">Crossroads Water Company disconnected service with one day's notice — Texas law requires ten. Green Mountain Energy cut electricity after an unauthorized 150% rate increase. The family home at 19409 Melwas Way became uninhabitable. Anna was evicted August 12, 2025 while her motions were pending.</p>
+    </div>
+    <div class="issue-card">
+      <div class="issue-num">03</div>
+      <div class="issue-title">Evicted while homeless, still filing motions pro se.</div>
+      <p class="issue-body">Since August 2025, Anna has been homeless — sleeping at public libraries in Austin. Without a home, without money, without an attorney, she filed a 13.33 MB mandamus petition to the Texas Supreme Court on May 11, 2026. It was accepted the same day.</p>
+    </div>
+    <div class="issue-card">
+      <div class="issue-num">04</div>
+      <div class="issue-title">Attorney misconduct — antisemitic remarks, improper fees.</div>
+      <p class="issue-body">Former probate attorney Charles Smaistrla made multiple antisemitic remarks when Anna questioned invoices totaling ~$15,000. He withdrew after she challenged his conduct. The court approved his withdrawal fees, deducted from Sakura's estate. A motion for reimbursement is pending.</p>
+    </div>
+    <div class="issue-card">
+      <div class="issue-num">05</div>
+      <div class="issue-title">Discrimination based on national origin and accent.</div>
+      <p class="issue-body">Anna is a Ukrainian-Polish-Jewish engineer, born in Russia, with an accent. She was fired from Charter Communications in 2022 after filing discrimination complaints — EEOC charge filed. She has faced harassment in the Pflugerville community and at public institutions. Sakura has faced harassment as her daughter.</p>
+    </div>
+    <div class="issue-card">
+      <div class="issue-num">06</div>
+      <div class="issue-title">Benefits denied through procedural barriers.</div>
+      <p class="issue-body">Food assistance was denied after Anna missed a single required phone call — no second chance given. Additional benefits denied after an agency requested documents already previously submitted. These barriers disproportionately affect people with ADHD — Anna's documented disability. No assistance has been provided for years.</p>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="section-fuchsia" id="help">
+<section>
+  <div class="section-label">Take Action</div>
+  <h2>How You Can Help</h2>
+  <div class="divider"></div>
+
+  <div class="help-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+    <div class="help-card">
+      <span class="help-icon">📢</span>
+      <h3>Share the Archive</h3>
+      <p>Spread the word. The case details are publicly verifiable at search.txcourts.gov under Case No. 26-0468.</p>
+      <a href="https://justiceforsakura.org" class="btn" style="font-size:0.7rem;">justiceforsakura.org</a>
+    </div>
+
+<div class="help-card">
+      <span class="help-icon">🍕</span>
+      <h3>Direct Aid (Venmo)</h3>
+      <p>Funds go directly toward basic survival, food, and urgent daily expenses. All transactions are kept fully transparent and public.</p>
+      <a href="https://account.venmo.com/u/Anna-Nyulund" class="btn btn-solid" style="font-size:0.7rem;" target="_blank">Support via Venmo</a>
+    </div>
+
+    <div class="help-card">
+      <span class="help-icon">⚖️</span>
+      <h3>Direct Aid (CashApp)</h3>
+      <p>Send directly via CashApp — no fees, no delays. Every dollar goes toward legal costs and basic survival.</p>
+      <a href="https://cash.app/$ANyulund" class="btn btn-solid" style="font-size:0.7rem;" target="_blank">Send via CashApp $ANyulund</a>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="section-white" id="contact">
+<section>
+  <div class="section-label">Contact</div>
+  <h2>Get in Touch</h2>
+  <div class="divider"></div>
+
+  <p>Case No. 26-0468 is publicly verifiable at <strong>search.txcourts.gov</strong>. All documents referenced on this site are part of the court record.</p>
+
+  <div class="contact-info">
+    <p style="margin-bottom:0.4rem;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--light-gray);font-weight:600;">✉ Email</p>
+    <a href="mailto:justiceforsakura@gmail.com">justiceforsakura@gmail.com</a>
+  </div>
+</section>
+</div>
+
+<footer>
+  <p style="font-family:'Playfair Display',serif;font-size:1rem;color:var(--fuchsia);margin-bottom:0.5rem;">Justice for Sakura Lewis 🌸</p>
+  <p>Texas Supreme Court 26-0468 · Probate C-1-PB-18-000719 · Travis County, Texas</p>
+  <p style="margin-top:0.75rem;"><a href="mailto:justiceforsakura@gmail.com">justiceforsakura@gmail.com</a></p>
+  <p style="margin-top:1rem;font-size:0.72rem;color:#444;">Maintained by Anna Nyulund on behalf of Sakura Lewis. All case information is documented and verifiable. Sensitive details redacted per Motion for Privacy Protections.</p>
+</footer>
+
+</body>
+</html>
